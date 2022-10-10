@@ -1,0 +1,278 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer; 
+    transition: all 0.2s ease; 
+}
+
+/* Design System */ 
+
+/* Typography */ 
+
+.heading-s {
+    font-size: 24px; 
+    line-height: 28px; 
+}
+.heading-m {
+    font-size: 32px; 
+    line-height: 40px; 
+}
+.heading-l {
+    font-size: 40px; 
+    line-height: 1.1; 
+}
+.heading-xl {
+    font-size: 56px; 
+    line-height: 70px; 
+}
+.body-m {
+    font-size: 18px; 
+    line-height: 28px; 
+}
+.body-s {
+    font-size: 16px; 
+    line-height: 28px; 
+    margin: 16px 0; 
+}
+button {
+    padding: 4px 16px; 
+    border-radius: 20px; 
+    font-size: 14px; 
+    line-height: 28px;
+    border: none; 
+    background-color: rgb(19, 24, 63);
+    color: white; 
+}
+
+/* Colors */ 
+
+.linear-1 {
+    background-image: linear-gradient(rgb(240, 42, 166), rgb(255, 111, 72));
+    background-color: none; 
+    color: white; 
+}
+
+.linear-2 {
+    background-image: linear-gradient(rgb(72, 81, 255), rgb(240, 42, 166))
+}
+
+/* Hero Section */ 
+
+.hero {
+    display: relative; 
+}
+
+.hero, .cards {
+    padding: 0px 16px; 
+    overflow: hidden; 
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; 
+    margin-bottom: 15px; 
+}
+
+nav button:hover {
+    background: rgb(102, 108, 163); 
+}
+
+.hero button:hover {
+    background: rgb(255, 167, 195); 
+}
+
+source {
+    object-fit: contain;
+}
+
+.text h1, .text p{
+    width: 343px; 
+}
+
+@media screen and (min-width: 400px) {
+    .hero {
+        padding-left: 40px; 
+        overflow: hidden; 
+    }
+    .hero-content {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .text {
+        text-align: center; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        padding: 20px 40px; 
+    }
+    nav .heading-s {
+        font-size: 32px; 
+    }
+    button {
+        font-size: 18px; 
+    }
+    .hero-content {
+        flex-direction: row; 
+        overflow-x: hidden; 
+        height: 512px; 
+        align-items: center;
+    }
+    .text {
+        text-align: left; 
+    }
+    .text p {
+        font-size: 18px; 
+    }
+    .picture-container {
+        position: absolute; 
+        top: -20%; 
+        left: 40%; 
+        width: 100%; 
+        z-index: -5; 
+        max-width: 870px;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    nav {
+        max-width: 1110px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        padding-left: 15px; 
+        padding-right: 5px; 
+    }
+    .hero-content {
+        height: 750px; 
+        max-width: 1110px; 
+        margin: 0 auto; 
+    }
+    .text h1 {
+        font-size: 40px; 
+    }
+    .picture-container {
+        left: 45%; 
+    }
+}
+
+/* Card Section*/ 
+
+.cards {
+    background-color: #F2F2F2;
+    padding-bottom: 32px; 
+    width: 100%; 
+}
+
+.card {
+    padding-bottom: 32px; 
+    border-radius: 15px; 
+    margin-bottom: 40px; 
+    max-width: 460px; 
+    min-width: 340px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.card > *, .special-card > * {
+    width: 268px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.special-card {
+    padding: 32px; 
+    margin-bottom: 40px; 
+    border-radius: 15px; 
+    max-width: 460px; 
+    margin-right: auto; 
+    margin-left: auto; 
+}
+
+.pink {
+    color: rgb(255, 167, 195); 
+}
+
+.white-bg {
+    background-color: white; 
+}
+
+.card-icon {
+    transform: translateY(-50%);
+    margin-bottom: -15px;
+}
+
+.card:last-of-type {
+    margin-bottom: 0; 
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        padding-top: 40px; 
+        max-width: 785px; 
+        margin: 0 auto; 
+    }
+    
+    .card:last-of-type {
+        margin-bottom: 40px; 
+    }
+    .special-card {
+        display: flex; 
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .card-container {
+        max-width: 1110px; 
+    }
+}
+
+/* Footer */ 
+
+.footer-container {
+    background-color: rgb(19, 24, 63); 
+    padding: 0 20px; 
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; 
+    /*max-width: 475px; 
+    margin: 0 auto; */
+}
+
+footer h2 {
+    color: white; 
+}
+
+footer button:hover {
+    background: rgb(255, 167, 195); 
+}
+
+@media screen and (min-width: 1110px) {
+    footer {
+        width: 1110px; 
+        margin: 0 auto; 
+    }
+}
